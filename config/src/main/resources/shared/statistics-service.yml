@@ -1,0 +1,20 @@
+security:
+  oauth2:
+    client:
+      clientId: statistics-service
+      clientSecret: ${STATISTICS_SERVICE_PASSWORD}
+      accessTokenUri: http://auth-service:5000/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://creditv12:ylpn170307@localhost:27017/credit_v12
+
+server:
+  context-path: /statistics
+  port: 7000
+
+rates:
+  url: http://api.fixer.io

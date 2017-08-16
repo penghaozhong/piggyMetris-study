@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: account-service
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        service-id: config-service
+      fail-fast: true
+      password: 123456
+      username: user
+      
+security:
+  oauth2:
+    client:
+      clientId: account-service
+      clientSecret: 123456
+      accessTokenUri: http://auth-service/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
+    resource:
+      user-info-uri: http://auth-service/uaa/users/current      

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: auth-service
+  cloud:
+     config:
+      enabled: true
+      discovery:
+        service-id: config-service
+      fail-fast: true
+      password: 123456
+      username: user
+      
+      

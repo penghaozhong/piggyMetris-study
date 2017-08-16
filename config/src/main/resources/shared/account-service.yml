@@ -1,0 +1,16 @@
+spring:
+  data:
+    mongodb: 
+        uri: mongodb://creditv12:ylpn170307@localhost:27017/credit_v12
+      
+
+server:
+  context-path: /accounts
+  port: 6000
+  
+
+  
+logging:
+  level:
+    org.springframework.security: debug
+    org.springframework.web: debug

@@ -1,0 +1,28 @@
+logging:
+  level:
+    org.springframework.security: INFO
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+    
+eureka:
+ client:
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka/ 
+ instance:
+    preferIpAddress: true
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+
+
+ACCOUNT_SERVICE_PASSWORD: 123456   
+
+#spring:
+#  rabbitmq:
+#    host: rabbitmq
